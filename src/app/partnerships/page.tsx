@@ -61,6 +61,28 @@ const partners = [
     accentBorder: "hover:border-rose-500/30"
   },
   {
+    name: "Vast.ai",
+    url: "https://cloud.vast.ai/?ref_id=657378",
+    description: "A marketplace for flexible GPU compute with real-time pricing, on-demand instances, and API-based provisioning.",
+    bestFor: "Cost-efficient training, inference, and experiments",
+    icon: CpuChipIcon,
+    category: "Cloud & Compute",
+    accent: "text-emerald-400",
+    accentBg: "group-hover:bg-emerald-500/20",
+    accentBorder: "hover:border-emerald-500/30"
+  },
+  {
+    name: "Runpod",
+    url: "https://runpod.io?ref=1hj3rk7a",
+    description: "GPU cloud for dedicated Pods, autoscaling Serverless inference, and multi-node AI workloads.",
+    bestFor: "AI inference, fine-tuning, and GPU development",
+    icon: CpuChipIcon,
+    category: "Cloud & Compute",
+    accent: "text-fuchsia-400",
+    accentBg: "group-hover:bg-fuchsia-500/20",
+    accentBorder: "hover:border-fuchsia-500/30"
+  },
+  {
     name: "HostKey.com",
     url: "https://www.hostkey.com/?a_aid=63db5be2bc84c",
     description: "Dedicated and GPU servers in Europe and the US for data-intensive and AI workloads.",

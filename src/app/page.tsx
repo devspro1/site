@@ -55,7 +55,6 @@ export default function Home() {
             <a href="#services" className="hover:text-white transition-colors">Services</a>
             <a href="#expertise" className="hover:text-white transition-colors">Expertise</a>
             <a href="#process" className="hover:text-white transition-colors">Approach</a>
-            <Link href="/partnerships" className="hover:text-white transition-colors">Partnerships</Link>
           </div>
           <a href="https://calendly.com/adel-devs/30min" target="_blank" rel="noopener noreferrer" className="hidden md:flex px-5 py-2.5 rounded-full bg-white text-black text-sm font-medium hover:bg-zinc-200 transition-colors shadow-[0_0_15px_rgba(255,255,255,0.1)]">
             Discuss Project
@@ -85,7 +84,6 @@ export default function Home() {
                 <a href="#services" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-white transition-colors py-2">Services</a>
                 <a href="#expertise" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-white transition-colors py-2">Expertise</a>
                 <a href="#process" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-white transition-colors py-2">Approach</a>
-                <Link href="/partnerships" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-white transition-colors py-2">Partnerships</Link>
                 <a href="https://calendly.com/adel-devs/30min" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)} className="mt-4 px-5 py-3 text-center rounded-full bg-white text-black font-medium hover:bg-zinc-200 transition-colors">
                   Discuss Project
                 </a>
@@ -854,12 +852,6 @@ export default function Home() {
             <div className="space-y-5 flex flex-col justify-between h-full">
               <h4 className="text-white font-semibold tracking-wider text-xs uppercase opacity-80">Connect</h4>
               <ul className="space-y-3 text-sm text-zinc-500 flex-1">
-                <li>
-                  <Link href="/partnerships" className="hover:text-indigo-400 transition-colors flex items-center justify-center sm:justify-start gap-2 group">
-                    <span className="w-1.5 h-1.5 rounded-full bg-indigo-500/50 group-hover:bg-indigo-400 transition-colors" />
-                    Partnerships
-                  </Link>
-                </li>
                 <li>
                   <a href="mailto:hello@devs.pro" className="hover:text-indigo-400 transition-colors flex items-center justify-center sm:justify-start gap-2 group">
                     <span className="w-1.5 h-1.5 rounded-full bg-indigo-500/50 group-hover:bg-indigo-400 transition-colors" />
