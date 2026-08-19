@@ -43,18 +43,19 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed w-full z-50 top-0 border-b border-white/5 bg-[#050505]/80 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="text-2xl font-bold tracking-tighter text-white flex items-center gap-2">
+          <Link href="/" className="text-2xl font-bold tracking-tighter text-white flex items-center gap-2">
             <div className="w-8 h-8 rounded bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
               <span className="text-white text-sm font-mono">/</span>
             </div>
             DEVS PRO
-          </div>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex gap-8 text-sm font-medium text-zinc-400">
             <a href="#services" className="hover:text-white transition-colors">Services</a>
             <a href="#expertise" className="hover:text-white transition-colors">Expertise</a>
             <a href="#process" className="hover:text-white transition-colors">Approach</a>
+            <Link href="/partnerships" className="hover:text-white transition-colors">Partnerships</Link>
           </div>
           <a href="https://calendly.com/adel-devs/30min" target="_blank" rel="noopener noreferrer" className="hidden md:flex px-5 py-2.5 rounded-full bg-white text-black text-sm font-medium hover:bg-zinc-200 transition-colors shadow-[0_0_15px_rgba(255,255,255,0.1)]">
             Discuss Project
@@ -62,6 +63,8 @@ export default function Home() {
 
           {/* Mobile Menu Button */}
           <button
+            aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isMobileMenuOpen}
             className="md:hidden p-2 text-zinc-400 hover:text-white transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -82,6 +85,7 @@ export default function Home() {
                 <a href="#services" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-white transition-colors py-2">Services</a>
                 <a href="#expertise" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-white transition-colors py-2">Expertise</a>
                 <a href="#process" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-white transition-colors py-2">Approach</a>
+                <Link href="/partnerships" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-white transition-colors py-2">Partnerships</Link>
                 <a href="https://calendly.com/adel-devs/30min" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)} className="mt-4 px-5 py-3 text-center rounded-full bg-white text-black font-medium hover:bg-zinc-200 transition-colors">
                   Discuss Project
                 </a>
@@ -114,7 +118,7 @@ export default function Home() {
             <br className="hidden md:block" />
             <br className="hidden md:block" />
             <span className="text-lg md:text-xl text-zinc-500 block mt-4 md:mt-0 font-medium">
-              We design scalable, production-grade and cost-efficient systems on Google Cloud Platform (GCP) and AWS.
+              We select and design the right cloud, bare-metal, or GPU infrastructure for each workload, geography, and growth stage.
             </span>
           </motion.p>
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -126,8 +130,8 @@ export default function Home() {
             </a>
           </motion.div>
           <motion.div variants={fadeInUp} className="mt-6 flex justify-center">
-            <a href="https://calendly.com/adel-devs/30min" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-zinc-500 hover:text-zinc-300 underline underline-offset-4 transition-colors">
-              Get a quick architecture review (30 min call)
+            <a href="#case-study" className="text-sm font-medium text-zinc-500 hover:text-zinc-300 underline underline-offset-4 transition-colors">
+              View infrastructure case study
             </a>
           </motion.div>
         </motion.div>
@@ -149,7 +153,7 @@ export default function Home() {
             <p className="text-lg text-zinc-400 leading-relaxed">
               We design cloud architectures that handle real-world load — launch spikes, payment traffic, and scaling bottlenecks.
               <br />
-              Built primarily on Google Cloud Platform, with AWS used when required.
+              We work across hyperscale cloud, European providers, bare metal, and specialized GPU infrastructure.
             </p>
             <ul className="space-y-4">
               {[
@@ -183,7 +187,7 @@ export default function Home() {
                   <CloudArrowUpIcon className="w-7 h-7 text-sky-400" />
                 </div>
                 <div className="flex flex-col justify-center">
-                  <h4 className="text-white font-semibold text-lg">GCP / AWS Stack</h4>
+                  <h4 className="text-white font-semibold text-lg">Multi-provider infrastructure</h4>
                   <p className="text-sm text-zinc-400 font-medium">Enterprise-grade infrastructure</p>
                 </div>
               </div>
@@ -349,7 +353,7 @@ export default function Home() {
       </section>
 
       {/* Case Study Section */}
-      <section className="py-32 px-6 border-t border-white/5 bg-[#050505] relative overflow-hidden">
+      <section id="case-study" className="py-32 px-6 border-t border-white/5 bg-[#050505] relative overflow-hidden scroll-mt-20">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-600/10 blur-[150px] rounded-full" />
         </div>

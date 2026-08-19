@@ -11,6 +11,10 @@ import {
   CloudIcon,
   CpuChipIcon,
   CreditCardIcon,
+  UserGroupIcon,
+  WrenchScrewdriverIcon,
+  DocumentTextIcon,
+  ChartBarIcon,
   ArrowRightIcon,
   Bars3Icon,
   XMarkIcon,
@@ -35,68 +39,129 @@ const staggerContainer: Variants = {
 
 const partners = [
   {
-    name: "Selectel",
-    url: "https://selectel.ru/?ref_code=842397bf4d",
-    description: "Reliable cloud provider and datacenter operator. Optimal for high-load projects.",
-    icon: ServerIcon,
-    color: "indigo"
-  },
-  {
-    name: "Reg.ru",
-    url: "https://www.reg.ru/?rlink=reflink-11259125",
-    description: "Largest domain registrar and hosting provider with a wide range of solutions for projects of any scale.",
-    icon: GlobeAltIcon,
-    color: "sky"
-  },
-  {
-    name: "Ping-admin.com",
-    url: "https://ping-admin.com/free_test/28470.html",
-    description: "Website and server uptime monitoring service from various global locations with instant notifications.",
-    icon: ShieldCheckIcon,
-    color: "emerald"
-  },
-  {
-    name: "Aeza.net",
-    url: "https://aeza.net/?ref=468871",
-    description: "High-performance cloud servers with powerful hardware (NVMe) and built-in Anti-DDoS protection.",
+    name: "DigitalOcean",
+    url: "https://www.awin1.com/cread.php?awinmid=123996&awinaffid=2843616",
+    description: "Developer-friendly cloud computing for building, deploying, and scaling modern applications.",
+    bestFor: "Startups, APIs, managed databases",
     icon: CloudIcon,
-    color: "purple"
+    category: "Cloud & Compute",
+    accent: "text-sky-400",
+    accentBg: "group-hover:bg-sky-500/20",
+    accentBorder: "hover:border-sky-500/30"
   },
   {
     name: "Railway.app",
     url: "https://railway.com?referralCode=eHXkgH",
-    description: "Modern platform for rapid deployment of web applications, databases, and microservices.",
+    description: "A modern platform for rapid deployment of web applications, databases, and microservices.",
+    bestFor: "Fast product launches and previews",
     icon: ServerIcon,
-    color: "rose"
+    category: "Cloud & Compute",
+    accent: "text-rose-400",
+    accentBg: "group-hover:bg-rose-500/20",
+    accentBorder: "hover:border-rose-500/30"
   },
   {
     name: "HostKey.com",
     url: "https://www.hostkey.com/?a_aid=63db5be2bc84c",
-    description: "Global provider of dedicated and GPU servers in Europe and the US for Big Data and AI projects.",
+    description: "Dedicated and GPU servers in Europe and the US for data-intensive and AI workloads.",
+    bestFor: "GPU, AI, and dedicated workloads",
     icon: CpuChipIcon,
-    color: "orange"
-  },
-  {
-    name: "PST.net",
-    url: "https://pst.net/?f=74cdb011f3fc440ecbae291d5c51e6c3",
-    description: "Virtual payment cards for affiliate marketing, advertising, and digital services without limits.",
-    icon: CreditCardIcon,
-    color: "blue"
-  },
-  {
-    name: "DigitalOcean",
-    url: "https://www.awin1.com/cread.php?awinmid=123996&awinaffid=2843616",
-    description: "Developer-friendly cloud computing platform for building, deploying, and scaling modern applications.",
-    icon: CloudIcon,
-    color: "sky"
+    category: "Cloud & Compute",
+    accent: "text-orange-400",
+    accentBg: "group-hover:bg-orange-500/20",
+    accentBorder: "hover:border-orange-500/30"
   },
   {
     name: "Contabo",
     url: "https://www.anrdoezrs.net/click-101716708-13796479",
-    description: "Cloud hosting provider offering German quality and global availability at a highly competitive price.",
+    description: "Cloud hosting with global availability and a strong price-to-resource ratio.",
+    bestFor: "Cost-sensitive persistent workloads",
     icon: ServerIcon,
-    color: "indigo"
+    category: "Cloud & Compute",
+    accent: "text-indigo-400",
+    accentBg: "group-hover:bg-indigo-500/20",
+    accentBorder: "hover:border-indigo-500/30"
+  },
+  {
+    name: "Selectel",
+    url: "https://selectel.ru/?ref_code=842397bf4d",
+    description: "Cloud and datacenter infrastructure suited to high-load projects.",
+    bestFor: "Regional cloud and bare metal",
+    icon: ServerIcon,
+    category: "Cloud & Compute",
+    accent: "text-indigo-400",
+    accentBg: "group-hover:bg-indigo-500/20",
+    accentBorder: "hover:border-indigo-500/30"
+  },
+  {
+    name: "Aeza.net",
+    url: "https://aeza.net/?ref=468871",
+    description: "High-performance cloud servers with NVMe storage and built-in Anti-DDoS protection.",
+    bestFor: "Compute-heavy regional workloads",
+    icon: CloudIcon,
+    category: "Cloud & Compute",
+    accent: "text-purple-400",
+    accentBg: "group-hover:bg-purple-500/20",
+    accentBorder: "hover:border-purple-500/30"
+  },
+  {
+    name: "Ping-admin.com",
+    url: "https://ping-admin.com/free_test/28470.html",
+    description: "Website and server uptime monitoring from global locations with instant notifications.",
+    bestFor: "External uptime and latency checks",
+    icon: ShieldCheckIcon,
+    category: "Operations & Business Tools",
+    accent: "text-emerald-400",
+    accentBg: "group-hover:bg-emerald-500/20",
+    accentBorder: "hover:border-emerald-500/30"
+  },
+  {
+    name: "Reg.ru",
+    url: "https://www.reg.ru/?rlink=reflink-11259125",
+    description: "Domain registration and hosting services for digital products of different sizes.",
+    bestFor: "Domains and regional hosting",
+    icon: GlobeAltIcon,
+    category: "Operations & Business Tools",
+    accent: "text-sky-400",
+    accentBg: "group-hover:bg-sky-500/20",
+    accentBorder: "hover:border-sky-500/30"
+  },
+  {
+    name: "PST.net",
+    url: "https://pst.net/?f=74cdb011f3fc440ecbae291d5c51e6c3",
+    description: "Virtual payment cards for advertising and digital service expenses.",
+    bestFor: "Managing distributed digital spend",
+    icon: CreditCardIcon,
+    category: "Operations & Business Tools",
+    accent: "text-blue-400",
+    accentBg: "group-hover:bg-blue-500/20",
+    accentBorder: "hover:border-blue-500/30"
   }
+];
+
+const partnerGroups = ["Cloud & Compute", "Operations & Business Tools"];
+
+const referralChannels = [
+  {
+    title: "Architecture decisions",
+    description: "We evaluate infrastructure during audits and recommend providers based on workload, compliance, geography, and cost.",
+    icon: ChartBarIcon,
+  },
+  {
+    title: "Migration & deployment",
+    description: "We turn recommendations into production systems, from containerized workloads to bare metal and GPU compute.",
+    icon: WrenchScrewdriverIcon,
+  },
+  {
+    title: "Technical proof",
+    description: "We support partners with implementation notes, comparisons, case studies, and practical guidance for technical buyers.",
+    icon: DocumentTextIcon,
+  },
+  {
+    title: "Qualified client access",
+    description: "We work directly with founders, CTOs, and product teams building fintech, B2B SaaS, and AI products.",
+    icon: UserGroupIcon,
+  },
 ];
 
 export default function Partnerships() {
@@ -122,12 +187,14 @@ export default function Partnerships() {
             <Link href="/#process" className="hover:text-white transition-colors">Approach</Link>
             <span className="text-white">Partnerships</span>
           </div>
-          <a href="https://calendly.com/adel-devs/30min" target="_blank" rel="noopener noreferrer" className="hidden md:flex px-5 py-2.5 rounded-full bg-white text-black text-sm font-medium hover:bg-zinc-200 transition-colors shadow-[0_0_15px_rgba(255,255,255,0.1)]">
-            Discuss Project
+          <a href="mailto:hello@devs.pro?subject=Infrastructure%20partnership" className="hidden md:flex px-5 py-2.5 rounded-full bg-white text-black text-sm font-medium hover:bg-zinc-200 transition-colors shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+            Discuss Partnership
           </a>
 
           {/* Mobile Menu Button */}
           <button
+            aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isMobileMenuOpen}
             className="md:hidden p-2 text-zinc-400 hover:text-white transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -149,8 +216,8 @@ export default function Partnerships() {
                 <Link href="/#expertise" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-white transition-colors py-2">Expertise</Link>
                 <Link href="/#process" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-white transition-colors py-2">Approach</Link>
                 <Link href="/partnerships" onClick={() => setIsMobileMenuOpen(false)} className="text-white transition-colors py-2">Partnerships</Link>
-                <a href="https://calendly.com/adel-devs/30min" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)} className="mt-4 px-5 py-3 text-center rounded-full bg-white text-black font-medium hover:bg-zinc-200 transition-colors">
-                  Discuss Project
+                <a href="mailto:hello@devs.pro?subject=Infrastructure%20partnership" onClick={() => setIsMobileMenuOpen(false)} className="mt-4 px-5 py-3 text-center rounded-full bg-white text-black font-medium hover:bg-zinc-200 transition-colors">
+                  Discuss Partnership
                 </a>
               </div>
             </motion.div>
@@ -159,7 +226,7 @@ export default function Partnerships() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-48 pb-20 px-6 relative overflow-hidden text-center z-10">
+      <section className="pt-44 pb-24 px-6 relative overflow-hidden text-center z-10">
         <ParticlesBackground />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-600/10 blur-[120px] rounded-full pointer-events-none" />
         
@@ -168,67 +235,174 @@ export default function Partnerships() {
            whileInView="visible"
            viewport={{ once: true }}
            variants={staggerContainer}
-           className="max-w-4xl mx-auto relative z-10"
+           className="max-w-5xl mx-auto relative z-10"
         >
           <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-emerald-300 mb-8 shadow-inner shadow-emerald-500/10">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.8)]" />
-            Infrastructure & Operations
+            Cloud, GPU & Infrastructure Partnerships
           </motion.div>
           
           <motion.h1 variants={fadeInUp} className="text-4xl md:text-6xl font-bold text-white tracking-tight leading-[1.1] mb-6">
-            We work with industry professionals to create <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-sky-500 drop-shadow-lg">reliable services</span>.
+            We help startups choose, deploy, and grow on the <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-sky-500 drop-shadow-lg">right infrastructure</span>.
           </motion.h1>
           
-          <motion.p variants={fadeInUp} className="text-xl md:text-2xl text-zinc-400 leading-relaxed max-w-2xl mx-auto">
-            Physical server suppliers, bare metal and virtual servers, datacenters and cloud computing
+          <motion.p variants={fadeInUp} className="text-lg md:text-xl text-zinc-400 leading-relaxed max-w-3xl mx-auto">
+            DEVS PRO is a senior engineering bureau working with fintech, B2B SaaS, and AI products. We influence infrastructure decisions through architecture audits, migrations, implementation work, and technical guidance.
           </motion.p>
+
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="mailto:hello@devs.pro?subject=Infrastructure%20partnership" className="h-14 px-8 rounded-full bg-white text-black text-base font-semibold flex items-center gap-2 hover:bg-zinc-200 transition-all hover:scale-105 w-full sm:w-auto justify-center shadow-[0_0_20px_rgba(255,255,255,0.15)]">
+              Discuss a partnership <ArrowRightIcon className="w-4 h-4" />
+            </a>
+            <a href="#partner-fit" className="h-14 px-8 rounded-full border border-white/10 bg-white/5 text-white text-base font-semibold flex items-center gap-2 hover:bg-white/10 transition-all hover:scale-105 w-full sm:w-auto justify-center backdrop-blur-sm">
+              See our partner fit
+            </a>
+          </div>
         </motion.div>
       </section>
 
-      {/* Partners Grid */}
-      <section className="py-20 px-6 border-t border-white/5 bg-[#0a0a0a] relative z-10 flex-1">
+      {/* Proof */}
+      <section className="py-12 px-6 border-y border-white/5 bg-[#0a0a0a] relative z-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8">
+          {[
+            { value: "30+", label: "products launched" },
+            { value: "100k+", label: "concurrent users handled" },
+            { value: "€50M+", label: "processed through platforms built" },
+            { value: "€10k–€80k", label: "typical client engagement" },
+          ].map((stat) => (
+            <div key={stat.label} className="text-center">
+              <p className="text-2xl md:text-4xl font-bold text-white tracking-tight">{stat.value}</p>
+              <p className="mt-2 text-xs md:text-sm text-zinc-500">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Partner Fit */}
+      <section id="partner-fit" className="py-24 px-6 bg-[#050505] relative z-10 scroll-mt-20">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.5, ease: 'easeOut' }}
-            className="mb-10 flex justify-center"
+            className="max-w-3xl mb-14"
           >
-            <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.03] border border-white/10 text-xs sm:text-sm text-zinc-400 text-center">
-              <span className="w-1.5 h-1.5 rounded-full bg-amber-400/80 shadow-[0_0_8px_rgba(251,191,36,0.6)]" />
-              We earn commissions when you shop through the links below
+            <span className="text-emerald-400 font-semibold tracking-wider text-sm uppercase">How we create qualified referrals</span>
+            <h2 className="mt-4 text-3xl md:text-5xl font-bold text-white tracking-tight">Technical influence, not mass traffic.</h2>
+            <p className="mt-5 text-lg text-zinc-400 leading-relaxed">
+              Our recommendations happen at the point where founders and engineering teams are making real architecture and infrastructure decisions.
             </p>
           </motion.div>
+
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
             variants={staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid md:grid-cols-2 gap-6"
           >
-            {partners.map((partner, idx) => (
-              <motion.div key={idx} variants={fadeInUp}>
-                <a href={partner.url} target="_blank" rel="noopener noreferrer" className="block h-full cursor-pointer">
-                  <SpotlightCard className={`p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:border-${partner.color}-500/30 hover:bg-white/[0.04] transition-all duration-300 group shadow-lg h-full flex flex-col`}>
-                    <div className="flex justify-between items-start mb-6 w-full relative z-10">
-                      <div className={`w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-${partner.color}-500/20 group-hover:scale-110 transition-all duration-300`}>
-                        <partner.icon className={`w-6 h-6 text-${partner.color}-400 drop-shadow-[0_0_8px_rgba(currentColor,0.5)]`} />
-                      </div>
-                      <ArrowTopRightOnSquareIcon className="w-5 h-5 text-zinc-600 group-hover:text-zinc-300 transition-colors" />
-                    </div>
-                    
-                    <h3 className="text-2xl font-bold text-white mb-3 relative z-10 flex items-center gap-2">
-                       {partner.name}
-                    </h3>
-                    <p className="text-zinc-400 leading-relaxed relative z-10 text-sm mt-auto">
-                        {partner.description}
-                    </p>
-                  </SpotlightCard>
-                </a>
+            {referralChannels.map((channel) => (
+              <motion.div key={channel.title} variants={fadeInUp} className="rounded-3xl border border-white/10 bg-white/[0.025] p-7 md:p-8">
+                <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-6">
+                  <channel.icon className="w-6 h-6 text-emerald-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white">{channel.title}</h3>
+                <p className="mt-3 text-zinc-400 leading-relaxed">{channel.description}</p>
               </motion.div>
             ))}
           </motion.div>
+
+          <div className="mt-8 grid lg:grid-cols-2 gap-6">
+            <div className="rounded-3xl border border-white/10 bg-[#0a0a0a] p-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-400">Who we reach</p>
+              <h3 className="mt-3 text-2xl font-bold text-white">Technical buyers with live products</h3>
+              <div className="mt-6 flex flex-wrap gap-3">
+                {["Founders & CTOs", "Funded startups", "Fintech", "B2B SaaS", "AI products", "High-load platforms"].map((item) => (
+                  <span key={item} className="px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-sm text-zinc-300">{item}</span>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-3xl border border-white/10 bg-[#0a0a0a] p-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-indigo-400">What partners can expect</p>
+              <h3 className="mt-3 text-2xl font-bold text-white">Fit-first recommendations</h3>
+              <ul className="mt-6 space-y-3 text-zinc-400">
+                {["Senior technical evaluation", "Qualified introductions and referrals", "Implementation and migration support", "Direct product feedback from real workloads"].map((item) => (
+                  <li key={item} className="flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-indigo-400" />{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partner Recommendations */}
+      <section id="recommendations" className="py-24 px-6 border-t border-white/5 bg-[#0a0a0a] relative z-10 flex-1 scroll-mt-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-14">
+            <div className="max-w-3xl">
+              <span className="text-sky-400 font-semibold tracking-wider text-sm uppercase">Current recommendations</span>
+              <h2 className="mt-4 text-3xl md:text-5xl font-bold text-white tracking-tight">Infrastructure and tools we recommend by use case.</h2>
+              <p className="mt-5 text-lg text-zinc-400 leading-relaxed">We select providers according to technical fit, reliability, location, and economics—not commission.</p>
+            </div>
+            <p className="max-w-md text-xs sm:text-sm text-zinc-500 leading-relaxed lg:text-right">
+              Some links below are affiliate links. DEVS PRO may earn a commission at no additional cost to you.
+            </p>
+          </div>
+
+          {partnerGroups.map((group) => (
+            <div key={group} className="mb-16 last:mb-0">
+              <h3 className="text-xl font-semibold text-white mb-6">{group}</h3>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={staggerContainer}
+                className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+              >
+                {partners.filter((partner) => partner.category === group).map((partner) => (
+                  <motion.div key={partner.name} variants={fadeInUp}>
+                    <a href={partner.url} target="_blank" rel="sponsored noopener noreferrer" className="block h-full cursor-pointer">
+                      <SpotlightCard className={`p-8 rounded-3xl bg-white/[0.02] border border-white/5 ${partner.accentBorder} hover:bg-white/[0.04] transition-all duration-300 group shadow-lg h-full flex flex-col`}>
+                        <div className="flex justify-between items-start mb-6 w-full relative z-10">
+                          <div className={`w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center ${partner.accentBg} group-hover:scale-110 transition-all duration-300`}>
+                            <partner.icon className={`w-6 h-6 ${partner.accent}`} />
+                          </div>
+                          <ArrowTopRightOnSquareIcon className="w-5 h-5 text-zinc-600 group-hover:text-zinc-300 transition-colors" />
+                        </div>
+                        <h4 className="text-2xl font-bold text-white mb-3 relative z-10">{partner.name}</h4>
+                        <p className="text-zinc-400 leading-relaxed relative z-10 text-sm">{partner.description}</p>
+                        <p className="mt-6 pt-5 border-t border-white/5 text-xs text-zinc-500 relative z-10">
+                          <span className="text-zinc-300 font-medium">Best for:</span> {partner.bestFor}
+                        </p>
+                      </SpotlightCard>
+                    </a>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Partner CTA */}
+      <section className="py-24 px-6 border-t border-white/5 bg-[#050505] relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] rounded-full bg-emerald-500/10 blur-[120px]" />
+        </div>
+        <div className="max-w-4xl mx-auto relative z-10 text-center">
+          <span className="text-emerald-400 font-semibold tracking-wider text-sm uppercase">Open to new partnerships</span>
+          <h2 className="mt-4 text-3xl md:text-5xl font-bold text-white tracking-tight">Let&apos;s build a partner motion around real technical fit.</h2>
+          <p className="mt-6 text-lg text-zinc-400 leading-relaxed max-w-2xl mx-auto">
+            We are expanding our network across European cloud, bare metal, GPU compute, and developer infrastructure. Tell us where your platform is strongest and we&apos;ll explore the right client and content use cases.
+          </p>
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="mailto:hello@devs.pro?subject=Infrastructure%20partnership" className="h-14 px-8 rounded-full bg-white text-black text-base font-semibold flex items-center gap-2 hover:bg-zinc-200 transition-all hover:scale-105 w-full sm:w-auto justify-center">
+              hello@devs.pro <ArrowRightIcon className="w-4 h-4" />
+            </a>
+            <a href="https://calendly.com/adel-devs/30min" target="_blank" rel="noopener noreferrer" className="h-14 px-8 rounded-full border border-white/10 bg-white/5 text-white text-base font-semibold flex items-center gap-2 hover:bg-white/10 transition-all hover:scale-105 w-full sm:w-auto justify-center">
+              Book a partner call
+            </a>
+          </div>
         </div>
       </section>
 

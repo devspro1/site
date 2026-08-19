@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import VisualEditsMessenger from "../visual-edits/VisualEditsMessenger";
-import ErrorReporter from "@/components/ErrorReporter";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
@@ -10,13 +8,13 @@ const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mon
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://devs.pro"),
-  title: "DEVS - AI-Driven Engineering | Python, FinTech & SaaS",
+  title: "DEVS PRO - AI-Driven Engineering | Python, FinTech & SaaS",
   description: "Ship enterprise-grade software faster. We accelerate Time-to-Market for funded startups, FinTech, and B2B SaaS using advanced AI tools and deep Python expertise.",
   openGraph: {
-    title: "DEVS - AI-Driven Engineering | Python, FinTech & SaaS",
+    title: "DEVS PRO - AI-Driven Engineering | Python, FinTech & SaaS",
     description: "Ship enterprise-grade software faster. We accelerate Time-to-Market for funded startups, FinTech, and B2B SaaS using advanced AI tools and deep Python expertise.",
     url: "https://devs.pro",
-    siteName: "DEVS",
+    siteName: "DEVS PRO",
     locale: "en_US",
     type: "website",
     images: [
@@ -24,13 +22,13 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "DEVS - AI-Driven Engineering",
+        alt: "DEVS PRO - AI-Driven Engineering",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "DEVS - AI-Driven Engineering | Python, FinTech & SaaS",
+    title: "DEVS PRO - AI-Driven Engineering | Python, FinTech & SaaS",
     description: "Ship enterprise-grade software faster. We accelerate Time-to-Market for funded startups, FinTech, and B2B SaaS using advanced AI tools and deep Python expertise.",
     images: ["/og-image.jpg"],
     creator: "@devspro",
@@ -83,19 +81,7 @@ export default function RootLayout({
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}
-        <ErrorReporter />
-        <Script
-          src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts//route-messenger.js"
-          strategy="afterInteractive"
-          data-target-origin="*"
-          data-message-type="ROUTE_CHANGE"
-          data-include-search-params="true"
-          data-only-in-iframe="true"
-          data-debug="true"
-          data-custom-data='{"appName": "YourApp", "version": "1.0.0", "greeting": "hi"}'
-        />
         {children}
-        <VisualEditsMessenger />
       </body>
     </html>
   );
