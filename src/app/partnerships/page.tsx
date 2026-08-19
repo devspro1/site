@@ -185,7 +185,7 @@ export default function Partnerships() {
             <Link href="/#services" className="hover:text-white transition-colors">Services</Link>
             <Link href="/#expertise" className="hover:text-white transition-colors">Expertise</Link>
             <Link href="/#process" className="hover:text-white transition-colors">Approach</Link>
-            <span className="text-white">Partnerships</span>
+            <Link href="/partnerships" aria-current="page" className="text-white">Partnerships</Link>
           </div>
           <a href="mailto:hello@devs.pro?subject=Infrastructure%20partnership" className="hidden md:flex px-5 py-2.5 rounded-full bg-white text-black text-sm font-medium hover:bg-zinc-200 transition-colors shadow-[0_0_15px_rgba(255,255,255,0.1)]">
             Discuss Partnership
@@ -215,7 +215,7 @@ export default function Partnerships() {
                 <Link href="/#services" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-white transition-colors py-2">Services</Link>
                 <Link href="/#expertise" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-white transition-colors py-2">Expertise</Link>
                 <Link href="/#process" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-white transition-colors py-2">Approach</Link>
-                <Link href="/partnerships" onClick={() => setIsMobileMenuOpen(false)} className="text-white transition-colors py-2">Partnerships</Link>
+                <Link href="/partnerships" aria-current="page" onClick={() => setIsMobileMenuOpen(false)} className="text-white transition-colors py-2">Partnerships</Link>
                 <a href="mailto:hello@devs.pro?subject=Infrastructure%20partnership" onClick={() => setIsMobileMenuOpen(false)} className="mt-4 px-5 py-3 text-center rounded-full bg-white text-black font-medium hover:bg-zinc-200 transition-colors">
                   Discuss Partnership
                 </a>
@@ -424,9 +424,9 @@ export default function Partnerships() {
               Building fintech systems that scale.
             </p>
             <div className="flex flex-col gap-3 mt-4">
-              <Link href="/#contact" className="text-indigo-400 text-sm font-medium hover:text-indigo-300 transition-colors flex items-center gap-2 group">
-                <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> Get a plan in 24h
-              </Link>
+              <a href="mailto:hello@devs.pro?subject=Infrastructure%20partnership" className="text-indigo-400 text-sm font-medium hover:text-indigo-300 transition-colors flex items-center gap-2 group">
+                <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> Discuss a partnership
+              </a>
               <a href="mailto:hello@devs.pro" className="text-zinc-400 text-sm font-medium hover:text-white transition-colors flex items-center gap-2 group">
                 <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> hello@devs.pro
               </a>
@@ -438,15 +438,21 @@ export default function Partnerships() {
               <h4 className="text-white font-semibold tracking-wider text-xs uppercase opacity-80">Expertise</h4>
               <ul className="space-y-3 text-sm text-zinc-500 flex-1">
                 <li><Link href="/#expertise" className="hover:text-indigo-400 transition-colors">Python Backend</Link></li>
-                <li><Link href="/#services" className="hover:text-indigo-400 transition-colors">AI Integrations</Link></li>
-                <li><Link href="/#services" className="hover:text-indigo-400 transition-colors">FinTech Architecture</Link></li>
-                <li><Link href="/#services" className="hover:text-indigo-400 transition-colors">Project Rescue</Link></li>
+                <li><Link href="/#ai-integrations" className="hover:text-indigo-400 transition-colors">AI Integrations</Link></li>
+                <li><Link href="/#fintech-architecture" className="hover:text-indigo-400 transition-colors">FinTech Architecture</Link></li>
+                <li><Link href="/#project-rescue" className="hover:text-indigo-400 transition-colors">Project Rescue</Link></li>
               </ul>
             </div>
 
             <div className="space-y-5 flex flex-col justify-between h-full">
               <h4 className="text-white font-semibold tracking-wider text-xs uppercase opacity-80">Connect</h4>
               <ul className="space-y-3 text-sm text-zinc-500 flex-1">
+                <li>
+                  <Link href="/partnerships" aria-current="page" className="hover:text-indigo-400 transition-colors flex items-center justify-center sm:justify-start gap-2 group">
+                    <span className="w-1.5 h-1.5 rounded-full bg-indigo-500/50 group-hover:bg-indigo-400 transition-colors" />
+                    Partnerships
+                  </Link>
+                </li>
                 <li>
                   <a href="mailto:hello@devs.pro" className="hover:text-indigo-400 transition-colors flex items-center justify-center sm:justify-start gap-2 group">
                     <span className="w-1.5 h-1.5 rounded-full bg-indigo-500/50 group-hover:bg-indigo-400 transition-colors" />
@@ -456,7 +462,7 @@ export default function Partnerships() {
                 <li>
                   <a href="https://calendly.com/adel-devs/30min" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-400 transition-colors flex items-center justify-center sm:justify-start gap-2 group">
                     <span className="w-1.5 h-1.5 rounded-full bg-indigo-500/50 group-hover:bg-indigo-400 transition-colors" />
-                    Book a Call
+                    Book a Partner Call
                   </a>
                 </li>
                 <li>

@@ -314,31 +314,35 @@ export default function Home() {
           >
             {[
               {
+                id: "product-development",
                 icon: RocketLaunchIcon,
                 color: "indigo",
                 title: "Revenue-generating products launched in weeks",
                 desc: "From zero to MVP and beyond. We take full ownership of your product development, allowing you to focus on business growth and user acquisition."
               },
               {
+                id: "project-rescue",
                 icon: ShieldCheckIcon,
                 color: "purple",
                 title: "Stabilizing crashing architectures to handle massive scale",
                 desc: "Inherited a failing codebase? System crashing under load? We audit, stabilize, and rebuild architectures to handle massive scale safely."
               },
               {
+                id: "fintech-architecture",
                 icon: ServerIcon,
                 color: "blue",
                 title: "Fintech architecture that survives scale & PSP limits",
                 desc: "Designing resilient, microservices-based or modular monolithic architectures specifically tailored for transactional business and FinTech."
               },
               {
+                id: "ai-integrations",
                 icon: CpuChipIcon,
                 color: "emerald",
                 title: "LLM features that drive real product value (not demos)",
                 desc: "Implementing LLMs and machine learning pipelines into your B2B SaaS to create unfair advantages against your competitors."
               }
-            ].map((service, idx) => (
-              <motion.div key={idx} variants={fadeInUp}>
+            ].map((service) => (
+              <motion.div id={service.id} key={service.id} variants={fadeInUp} className="scroll-mt-28">
                 <SpotlightCard className={`p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:border-${service.color}-500/30 hover:bg-white/[0.04] transition-all duration-300 group shadow-lg h-full`}>
                   <div className={`w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-6 group-hover:bg-${service.color}-500/20 group-hover:scale-110 transition-all duration-300`}>
                     <service.icon className={`w-6 h-6 text-${service.color}-400 drop-shadow-[0_0_8px_rgba(currentColor,0.5)]`} />
@@ -816,12 +820,12 @@ export default function Home() {
 
           {/* Logo & Info */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-5">
-            <div className="flex items-center space-x-3 group cursor-pointer">
+            <Link href="/" className="flex items-center space-x-3 group cursor-pointer">
               <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/20 group-hover:shadow-indigo-500/40 transition-all duration-300">
                 <span className="text-white text-xl font-bold font-mono leading-none">/</span>
               </div>
               <span className="text-2xl font-bold text-white tracking-tight group-hover:text-indigo-100 transition-colors">DEVS PRO</span>
-            </div>
+            </Link>
             <p className="text-zinc-400 text-sm max-w-sm leading-relaxed font-medium">
               Building fintech systems that scale.
             </p>
@@ -841,15 +845,21 @@ export default function Home() {
               <h4 className="text-white font-semibold tracking-wider text-xs uppercase opacity-80">Expertise</h4>
               <ul className="space-y-3 text-sm text-zinc-500 flex-1">
                 <li><a href="#expertise" className="hover:text-indigo-400 transition-colors">Python Backend</a></li>
-                <li><a href="#services" className="hover:text-indigo-400 transition-colors">AI Integrations</a></li>
-                <li><a href="#services" className="hover:text-indigo-400 transition-colors">FinTech Architecture</a></li>
-                <li><a href="#services" className="hover:text-indigo-400 transition-colors">Project Rescue</a></li>
+                <li><a href="#ai-integrations" className="hover:text-indigo-400 transition-colors">AI Integrations</a></li>
+                <li><a href="#fintech-architecture" className="hover:text-indigo-400 transition-colors">FinTech Architecture</a></li>
+                <li><a href="#project-rescue" className="hover:text-indigo-400 transition-colors">Project Rescue</a></li>
               </ul>
             </div>
 
             <div className="space-y-5 flex flex-col justify-between h-full">
               <h4 className="text-white font-semibold tracking-wider text-xs uppercase opacity-80">Connect</h4>
               <ul className="space-y-3 text-sm text-zinc-500 flex-1">
+                <li>
+                  <Link href="/partnerships" className="hover:text-indigo-400 transition-colors flex items-center justify-center sm:justify-start gap-2 group">
+                    <span className="w-1.5 h-1.5 rounded-full bg-indigo-500/50 group-hover:bg-indigo-400 transition-colors" />
+                    Partnerships
+                  </Link>
+                </li>
                 <li>
                   <a href="mailto:hello@devs.pro" className="hover:text-indigo-400 transition-colors flex items-center justify-center sm:justify-start gap-2 group">
                     <span className="w-1.5 h-1.5 rounded-full bg-indigo-500/50 group-hover:bg-indigo-400 transition-colors" />
