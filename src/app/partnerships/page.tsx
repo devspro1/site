@@ -50,6 +50,17 @@ const partners = [
     accentBorder: "hover:border-sky-500/30"
   },
   {
+    name: "UpCloud",
+    url: "https://signup.upcloud.com/?promo=affiliate-devspro250&utm_source=devspro&utm_medium=affiliate&utm_campaign=affiliate-devspro250",
+    description: "European cloud platform for virtual servers, managed Kubernetes, databases, and object storage.",
+    bestFor: "Production cloud infrastructure and managed services",
+    icon: CloudIcon,
+    category: "Cloud & Compute",
+    accent: "text-cyan-400",
+    accentBg: "group-hover:bg-cyan-500/20",
+    accentBorder: "hover:border-cyan-500/30"
+  },
+  {
     name: "Railway.app",
     url: "https://railway.com?referralCode=eHXkgH",
     description: "A modern platform for rapid deployment of web applications, databases, and microservices.",
@@ -125,6 +136,17 @@ const partners = [
     accent: "text-purple-400",
     accentBg: "group-hover:bg-purple-500/20",
     accentBorder: "hover:border-purple-500/30"
+  },
+  {
+    name: "Proxy.Market",
+    url: "https://dashboard.proxy.market/?ref=DEVSPRO",
+    description: "Residential, mobile, ISP, and datacenter proxies for reliable web data collection and automation.",
+    bestFor: "Web scraping, monitoring, and geo-targeted access",
+    icon: GlobeAltIcon,
+    category: "Operations & Business Tools",
+    accent: "text-amber-400",
+    accentBg: "group-hover:bg-amber-500/20",
+    accentBorder: "hover:border-amber-500/30"
   },
   {
     name: "Ping-admin.com",
