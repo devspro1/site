@@ -61,6 +61,17 @@ const partners = [
     accentBorder: "hover:border-cyan-500/30"
   },
   {
+    name: "Alibaba Cloud",
+    url: "https://www.alibabacloud.com/campaign/benefits?referral_code=A92X94",
+    description: "Global cloud platform for elastic compute, managed Kubernetes, databases, storage, and AI services.",
+    bestFor: "Global deployments and Asia-focused workloads",
+    icon: CloudIcon,
+    category: "Cloud & Compute",
+    accent: "text-orange-400",
+    accentBg: "group-hover:bg-orange-500/20",
+    accentBorder: "hover:border-orange-500/30"
+  },
+  {
     name: "Railway.app",
     url: "https://railway.com?referralCode=eHXkgH",
     description: "A modern platform for rapid deployment of web applications, databases, and microservices.",
