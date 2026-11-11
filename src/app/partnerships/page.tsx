@@ -160,6 +160,17 @@ const partners = [
     accentBorder: "hover:border-amber-500/30"
   },
   {
+    name: "MobileProxy.Space",
+    url: "https://mobileproxy.space/user.html?free&p=284506",
+    description: "Mobile, residential, datacenter, and backconnect proxies with HTTP(S), SOCKS5, and IP rotation.",
+    bestFor: "Regional testing, web data, and mobile QA",
+    icon: GlobeAltIcon,
+    category: "Operations & Business Tools",
+    accent: "text-pink-400",
+    accentBg: "group-hover:bg-pink-500/20",
+    accentBorder: "hover:border-pink-500/30"
+  },
+  {
     name: "Ping-admin.com",
     url: "https://ping-admin.com/free_test/28470.html",
     description: "Website and server uptime monitoring from global locations with instant notifications.",

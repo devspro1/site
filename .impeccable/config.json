@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "src/app/partnerships/page.tsx"
+        ],
+        "createdAt": "2026-11-11T11:01:09.997Z",
+        "reason": "Codex review: pre-existing hero emphasis is an intentional branded treatment outside this referral-card change"
+      }
+    ]
+  }
+}
